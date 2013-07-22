@@ -70,9 +70,9 @@ then
 fi
 
 name=$(cat $build/.godir)
-p=$GOPATH/src/$name
+p=$GOPATH/src/
 mkdir -p $p
-cp -R $build/* $p
+cp -R $build/src/* $p
 
 unset GIT_DIR # unset git dir or it will mess with goinstall
 echo "-----> Running: go get -tags heroku ./..."
